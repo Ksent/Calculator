@@ -1,0 +1,61 @@
+.activity {
+  margin: 0;
+  margin-top: 25px;
+  padding: 15px;
+  border: 2px solid #7fbc00;
+  border-radius: 9px;
+  background-color: #ffffff;
+}
+
+.activity__title {
+  padding: 0 5px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #7fbb00;
+}
+
+.activity__input {
+  width: 13px;
+  height: 13px;
+  margin: 7px 11px 0 7px; 
+  opacity: 0;
+  &:checked + .activity__subtitle {
+    color: #7fbb00;
+  }
+  &:checked + .activity__subtitle::before {
+    background-color: #7fbc00;
+    box-shadow: inset 0 0 0 1.6px #ffffff, 0 0 0 2px #7fbc00;
+  }
+  &:focus + .activity__subtitle::before {
+    box-shadow: inset 0 0 0 1.6px #ffffff, 0 0 0 2px #7fbc00;
+  }
+}
+
+.activity__subtitle {
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: -24px;
+    border-radius: 9px;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 1px #9b9b9b;
+  }
+  &:hover {
+    color: #7fbb00;
+  }
+}
+
+.activity__text {
+  margin: 5px 15px 12px 32px;
+  display: block;
+  font-size: 14px;
+  color: #9b9b9b;
+}
